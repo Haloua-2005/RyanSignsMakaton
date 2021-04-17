@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto", sans-serif;
+}
+/*ScrollBar configuration*/
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #686868;
+}
+/* ::-webkit-scrollbar-track {
+  border-left: 0.5px solid whitesmoke;
+  box-shadow: inset 0 0 2.5px rgba(255, 255, 255, 0.5);
+} */
+::-webkit-scrollbar-thumb {
+  background-color: #5788b9;
+  border-radius: 5rem;
+}
+
+/*Burger*/
+.menu-btn {
+  z-index: 3;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn .burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: black;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn .burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: black;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn .burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background: black;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn .burger.open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+.menu-btn .burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+  background: white;
+}
+.menu-btn .burger.open::after {
+  width: 28px;
+  transform: rotate(-45deg) translate(3px, -7px);
+  background: white;
+}
+
+/*Navbar*/
+.navbar {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  opacity: 0.98;
+}
+.navbar.open {
+  visibility: visible;
+  z-index: 2;
+}
+
+.menu-nav {
+  background: rgba(0, 0, 0, 0.95);
+  height: 100vh;
+  overflow: hidden;
+  list-style-type: none;
+  padding-right: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-100%);
+}
+.menu-nav.open {
+  transform: translateY(0);
+}
+
+.menu-nav__item {
+  transform: translateX(100vw);
+  transition: all 0.5s ease-in-out;
+}
+.menu-nav__item.open {
+  transform: translateX(0);
+}
+
+.menu-nav__link {
+  display: inline-block;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+  color: rgb(255, 196, 0);
+}
+
+.menu-nav__item:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
+.menu-nav__item:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+  transition-delay: 0.35s;
+}
+
+.menu-nav__item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+  transition-delay: 0.45s;
+}
+
+.menu-nav__item:nth-child(4) {
+  -webkit-transition-delay: 0.55s;
+  transition-delay: 0.55s;
+}
+
+/*Logo*/
+.logo {
+  width: 8rem;
+  height: auto;
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  z-index: 4;
+  background-color: rgba(255, 255, 255);
+  border-radius: 5rem;
+}
+
+/*Main*/
+.Socials {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  background: url(./assets/images/About_me_b.png);
+  padding-bottom: 2.75rem;
+}
+
+.welcome {
+}
+
+.section {
+  color: initial;
+  font-size: 10vw;
+  font-weight: bold;
+}
+
+.email {
+  color: initial;
+  font-size: 1.75em;
+  font-weight: bold;
+}
+
+.flx {
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fab {
+  font-size: 20vw;
+}
+
+.fa-instagram {
+  background: linear-gradient(
+    to top right,
+    #ffdc80,
+    #fcaf45,
+    #f77737,
+    #f56040,
+    #fd1d1d,
+    #e1306c,
+    #c13584,
+    #833ab4,
+    #5b51d8,
+    #405de6
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.Instagram-name {
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.Instagram-name:hover {
+  background: linear-gradient(
+    to top right,
+    #ffdc80,
+    #fcaf45,
+    #f77737,
+    #f56040,
+    #fd1d1d,
+    #e1306c,
+    #c13584,
+    #833ab4,
+    #5b51d8,
+    #405de6
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.fa-tiktok {
+  text-shadow: -0.04em -0.02em 0 rgba(37, 244, 238),
+    0.04em 0.02em 0 rgba(254, 44, 85);
+}
+
+.tiktok-name {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.tiktok-name:hover {
+  text-shadow: -0.04em -0.02em 0 rgba(37, 244, 238),
+    0.04em 0.02em 0 rgba(254, 44, 85);
+}
+
+.names {
+  margin: 1em 0;
+}
+
+.names > a {
+  color: black;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #5788b9;
+  color: #686868;
+  height: 2.75rem;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+}
+
+/*Media Query*/
+@media (min-width: 850px) {
+  /*Main*/
+  .Socials {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section {
+    font-size: 5vw;
+  }
+  .fab {
+    font-size: 10vw;
+  }
+}
