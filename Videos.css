@@ -2,7 +2,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 html {
   font-family: "Roboto", sans-serif;
@@ -210,13 +209,16 @@ html {
 .footer {
   background: #5788b9;
   color: #686868;
-  height: 2.75rem;
+  height: 2rem;
   width: 100vw;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   bottom: 0px;
+}
+.footer-bottom {
+  float: none;
 }
 
 /*Media Query*/

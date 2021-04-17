@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 html {
   font-family: "Roboto", sans-serif;
@@ -164,8 +163,8 @@ html {
 
 .Contact {
   background: url(./assets/images/About_me_b.png);
-  padding: 3.5rem;
-  height: 100vh;
+  padding: 3.5rem 0;
+  height: 100%;
 }
 
 .title {
